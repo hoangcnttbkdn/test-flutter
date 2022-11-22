@@ -12,11 +12,11 @@ pipeline {
                 sh "./gradlew assembleDebug"
             }
         }
-       
+    }
     post {
         always {
             archiveArtifacts artifacts: '*/.apk'
         }
     }
 }
-}
+

@@ -4,12 +4,12 @@ pipeline {
         stage("Clean Build Debug APK") {
             steps {
                 sh "cd android"
-                sh "./gradlew clean"
+                sh "gradlew clean"
             }
         }
         stage("Build Debug APK") {
             steps {
-                sh "./gradlew assembleDebug"
+                sh "gradlew assembleDebug"
             }
         }
     }
